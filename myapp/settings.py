@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'athletes'
+    'athletes',
+    'noc',
+    'olympics'
 ]
 
 MIDDLEWARE = [
