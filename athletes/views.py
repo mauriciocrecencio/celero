@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .models import Athlete, Athlete_instance
+from .models import Athlete, AthleteInstance
 from .serializers import AthleteSerializer, AthleteInstanceSerializer
 
 # Create your views here.
@@ -27,6 +27,6 @@ class AthleteView(APIView):
 
 class AthleteInstanceView(APIView):
     def get(self,request):
-        queryset = Athlete_instance.objects.all()
+        queryset = AthleteInstance.objects.all()
         serializer = AthleteInstanceSerializer(queryset, many=True)
         return Response(serializer.data)

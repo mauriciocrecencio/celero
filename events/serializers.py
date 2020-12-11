@@ -6,5 +6,5 @@ class EventSerializer(serializers.Serializer):
     sport = serializers.SerializerMethodField('get_sport')
     
     def get_sport(self,event):
-        sport = event.sport_id
+        sport = event.sport
         return SportSerializer(sport).data

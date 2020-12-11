@@ -11,5 +11,5 @@ class SportSerializer(serializers.Serializer):
     game = serializers.SerializerMethodField('get_game')
 
     def get_game(self, sport):
-        game = sport.game_id
+        game = sport.game
         return GameSerializer(game).data

@@ -10,4 +10,4 @@ class Game(models.Model):
     
 class Sport(models.Model):
     name = models.CharField(max_length=255)
-    game_id = models.ForeignKey(Game, on_delete=models.CASCADE)
+    game = models.ForeignKey(Game, on_delete=models.CASCADE)

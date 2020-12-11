@@ -5,4 +5,4 @@ from sports.models import Sport
 
 class Event(models.Model):
     name = models.CharField(max_length=255)
-    sport_id = models.ForeignKey(Sport, on_delete=models.CASCADE)
+    sport = models.ForeignKey(Sport, on_delete=models.CASCADE)

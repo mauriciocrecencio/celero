@@ -13,12 +13,11 @@ NOC_CSV = PATH + '/noc_regions.csv'
 
 class Command(BaseCommand):
     def handle(self, *args, **options):
-        print('veio athlete')
-        # self.create_games()
-        # self.create_sports()
-        # self.create_events()
-        # self.create_nocs()
-        # self.create_athletes()
+        self.create_games()
+        self.create_sports()
+        self.create_events()
+        self.create_nocs()
+        self.create_athletes()
         self.create_athletes_instances()
 
     def create_games(self):

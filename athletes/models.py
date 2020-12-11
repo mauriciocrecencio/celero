@@ -8,15 +8,9 @@ class Athlete(models.Model):
     team = models.CharField(max_length=100)
     noc = models.ForeignKey(Noc, on_delete=models.CASCADE)
 
-    
-
-    def save(self, *args, **kwargs):
-        self.full_clean()
-        return super(Athlete, self).save(*args, **kwargs)
-
-class Athlete_instance(models.Model):
-    athlete_id = models.ForeignKey(Athlete, on_delete=models.CASCADE)
-    event_id = models.ManyToManyField(Event)
+class AthleteInstance(models.Model):
+    athlete = models.ForeignKey(Athlete, on_delete=models.CASCADE)
+    event = models.ManyToManyField(Event)
     medal = models.CharField(max_length=20)
     age = models.IntegerField()
     height = models.CharField(max_length=100)
