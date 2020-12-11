@@ -3,3 +3,4 @@ from .models import Athlete
 
 class AthleteSerializer(serializers.Serializer):
     name = serializers.CharField()
+    
