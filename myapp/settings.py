@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'athletes',
     'noc',
-    'olympics'
+    'events',
+    'sports'
 ]
 
 MIDDLEWARE = [
